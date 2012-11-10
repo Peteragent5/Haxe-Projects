@@ -12,6 +12,9 @@ cls
 %e%.
 %e%  x - Exit
 %e%.
+%e%  Folders:
+for /D %%f in (*) do %e%  %%f
+%e%.
 set f=
 set /P f=%bs% Folder name: 
 if '%f%'=='' goto run
@@ -24,6 +27,8 @@ goto run
 %e%.
 set a=
 set /P a=%bs% Class name: 
+if '%a%'=='' goto run
+if /I %a%==x goto exit
 %e%.
 %e%  Building %f%.hx ...
 cd /D %f%\src
