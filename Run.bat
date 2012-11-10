@@ -6,4 +6,4 @@ set proj=Test
 if exist "%proj%\bin\%proj%.n" cd /D "%~dp0%proj%\bin" & neko %proj%.n
 if exist "%proj%\src\%proj%.n" cd /D "%~dp0%proj%\src" & neko %proj%.n
 
-::pause
+rem pause
